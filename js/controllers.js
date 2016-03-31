@@ -414,11 +414,12 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/tabl
             'Pts': data[i][2],
             'Gd': data[i][3],
             'img': imagen
-
           };
           
           posiciones.push(posicion);
         };
+        $scope.etapa = data[0][5];
+        $scope.fecha = data[0][6];
         $scope.data_posicion = posiciones;
 loading(false);
         localStorage.setItem('posiciones-planetamarillo', JSON.stringify(posiciones));
