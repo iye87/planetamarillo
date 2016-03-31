@@ -13,12 +13,14 @@
 
 	<div id="" ng-repeat="calendario in data_calendario">
 	<div class="row row-center" style="background-color: #E8E9E9; border: think solid black">
-	  <div class="col col-25"><div style="font-weight: bold">{{calendario.jornada}}</div><div>{{calendario.fecha}}</div></div>
+	  <div class="col"><div align="center" style="font-weight: bold">{{calendario.jornada}} | {{calendario.fecha}}</div></div>
+	</div>
+	<div class="row row-center" style="background-color: #E8E9E9; border: think solid black">
 	  <div style="font-size:12px;font-weight: bold" class="col">{{calendario.equipo_local}}</div>
-	  <div class="col"><img ng-src="{{calendario.img_local}}" style="width: 40px; height: 40px"></div>
+	  <div class="col"><div align="center"><img ng-src="{{calendario.img_local}}" style="width: 40px; height: 40px"></div></div>
 	  <div class="col col-10"><div align="center" style="background-color: #D1D3D4; font-weight: bold">{{calendario.goles_local}}</div></div>
 	  <div class="col col-10"><div align="center" style="background-color: #D1D3D4; font-weight: bold">{{calendario.goles_vicitante}}</div></div>
-	  <div class="col"><img ng-src="{{calendario.img_vicitante}}" style="width: 40px; height: 40px"></div>
+	  <div class="col"><div align="center"><img ng-src="{{calendario.img_vicitante}}" style="width: 40px; height: 40px"></div></div>
 	  <div style="font-size:12px;font-weight: bold" class="col">{{calendario.equipo_vicitante}}</div>
 	</div>
 	<div class="row" style="background-color: #D1D3D4"></div>
