@@ -1,0 +1,45 @@
+<ion-view view-title="" style="background-color: #D1D3D4">
+<ion-nav-bar class="bar-energized">
+    <ion-nav-buttons side="left">
+     <!-- Toggle left side menu -->
+     <button menu-toggle="left" class="button icon-left ion-navicon-round button-clear button-dark"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>  
+  <ion-content>
+  
+	<div class="button-bar">
+	  <a class="button"><label style="font-size: 10px">RESULTADO</label></a>
+	  <a class="button"><label style="font-size: 10px">PARTIDOS</label></a>
+	  <a class="button"><label style="font-size: 10px">GOLEADORES</label></a>
+	  <a class="button"><label style="font-size: 10px">MARCADOR</label></a>
+	</div>
+	
+	<div class="row" style="background-color: #D1D3D4">
+		<div class="col col-50"><h4 class="title" style="color: #000">Tabla de Posiciones</h4></div>
+	</div>
+	<div class="row" style="background-color: #D1D3D4">		
+		<div class="col col-33 col-offset-80"><h5 class="title" style="color: #000">Fecha 18</h5></div>
+	</div>
+
+	<div class="row" style="background-color: #D1D3D4">
+	  <div class="col"></div>
+	  <div class="col col-33">EQUIPO</div>
+	  <div class="col">PJ</div>
+	  <div class="col">PTS</div>
+	  <div class="col">GD</div>
+	  <div class="col"></div>
+	</div>
+
+	<div id="" ng-repeat="posicion in data_posicion">
+	<div class="row" style="background-color: #E8E9E9; border: think solid black">
+	  <div class="col">{{posicion.id}}</div>
+	  <div class="col col-33">{{posicion.equipo}}</div>
+	  <div class="col">{{posicion.Pj}}</div>
+	  <div class="col">{{posicion.Pts}}</div>
+	  <div class="col">{{posicion.Gd}}</div>
+	  <div class="col"><img ng-src="{{posicion.img}}" style="width: 20px; height: 20px"></div>
+	</div>
+	<div class="row" style="background-color: #D1D3D4"></div>
+	</div>
+  </ion-content>
+</ion-view>

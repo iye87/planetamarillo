@@ -1,0 +1,144 @@
+<ion-view view-title="" style="background-color: #F1F2F2;">
+<ion-nav-bar class="bar-energized">
+    <ion-nav-buttons side="left">
+     <!-- Toggle left side menu -->
+     <button menu-toggle="left" class="button icon-left ion-navicon-round button-clear button-dark"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+  <div class="row" style="background-color: #FED931">
+  <div class="col col">
+    <button class="button button-clear button-dark" ng-click="cerrarClic()">
+    CANCELAR
+  </button>
+  </div>
+  <div class="col col">
+  <h5 class="title" style="margin-top: 16px; color: #fff">EDITAR PERFIL</h5>
+  </div>
+  <div class="col col">
+  <button class="button button-clear button-dark">
+    GUARDAR
+  </button> 
+  </div>
+  </div>
+
+  <div><img src="img/avatar.png" style="width: 50px; height: 50px; margin-left: 43%; margin-right: 50px; margin-top: 10px;"></div>
+  <div><label><p align="center" class="p1">Añada una foto opcional a su perfil</p></label></div>
+
+
+    <form ng-submit="doLogin()">
+      <div class="row">
+      <div class="col col-25">
+        <label class="item item-input redondo">
+          <input type="text" placeholder="Sr">
+        </label>
+      </div>
+      <div class="col col-75">
+        <label class="item item-input redondo">
+          <input type="text" placeholder="Nombre">
+        </label>
+      </div>
+    </div>
+     <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo">
+          <input type="text" placeholder="Apellidos">
+        </label>
+       </div> 
+     </div>
+     <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo">
+          <input type="text" placeholder="E-mail">
+        </label>
+       </div> 
+     </div>
+     <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo fondo-input">
+          <input type="text" placeholder="Confirmar E-mail">
+        </label>
+       </div> 
+     </div>
+     <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo">
+          <input type="text" placeholder="Contraseña">
+        </label>
+       </div> 
+     </div>
+     <div class="row">
+     <div class="col col">
+      <p class="p1">Debe tener minimo 8 caracteres</p>
+     </div> 
+     </div>     
+     <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo fondo-input">
+          <input type="text" placeholder="Confirmar Contraseña">
+        </label>
+       </div> 
+     </div>
+    <div class="row">
+          <div class="col col-25">
+            <label class="item item-input redondo">
+            <input type="text" placeholder="+593">
+          </label>
+          </div>
+          <div class="col col-75" >
+          <label class="item item-input redondo">
+          <input type="text" placeholder="Celular">
+        </label>
+          </div>
+    </div>
+    <div class="row">
+          <div class="col col-25">
+            <label class="item item-input redondo">
+            <input type="text" placeholder="Cédula">
+          </label>
+          </div>
+          <div class="col col-75" >
+          <label class="item item-input redondo">
+          <input type="text" placeholder="">
+        </label>
+          </div>
+    </div>
+    <div class="row">
+     <div class="col col">
+      <p class="p1">Fecha de Nacimiento</p>
+     </div> 
+     </div>
+    <div class="row">
+      <div class="col col">
+      <label class="item item-input redondo">
+        <input type="date">
+      </label>
+    </div>
+    </div>
+    <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo">
+          <input type="text" placeholder="País">
+        </label>
+       </div> 
+     </div>
+    <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo">
+          <input type="text" placeholder="Provincia">
+        </label>
+       </div> 
+     </div>
+    <div class="row">
+     <div class="col col">
+      <label class="item item-input redondo">
+          <input type="text" placeholder="Ciudad">
+        </label>
+       </div> 
+     </div>
+    <div style="margin-left:25%; margin-top:5px; margin-right:5px">
+        <label><input type="checkbox"/>He leido y acepto los <a href="">Términos de Uso</a> de PlanetAmarillo.com</label>
+    </div>
+    </form>
+  </ion-content>
+</ion-view>

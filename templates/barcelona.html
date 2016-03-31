@@ -1,0 +1,16 @@
+<ion-view view-title="" style="background-color: #fed931;">
+<ion-nav-bar class="bar-energized">
+    <ion-nav-buttons side="left">
+	   <!-- Toggle left side menu -->
+	   <button menu-toggle="left" class="button icon-left ion-navicon-round button-clear button-dark"></button>
+	  </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+	  <div id="contenidos" ng-repeat="prueba in data_noticias" ng-click="noticiaClic(prueba.id)">
+	    	<img src="{{prueba.img}}" style="width: 100%">
+	    		<div id="texto">
+	    		<div align="justify" style="margin-bottom:3px;font-size:14px;margin-right: 5px;margin-left: 5px;font-weight: bold;" ng-bind-html="prueba.titulo"></div>
+	    		</div>
+	    </div>
+  </ion-content>
+</ion-view>

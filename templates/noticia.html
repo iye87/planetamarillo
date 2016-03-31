@@ -1,0 +1,17 @@
+<ion-view view-title="">
+<ion-nav-bar class="bar-energized">
+      <ion-nav-back-button class="button icon-left ion-chevron-left button-clear button-dark">
+	     Atras
+	  </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content>
+	<img class="media-content" src="{{img}}" style="width: 100%">
+	<div class="content-padded" style="margin: 5px">
+	<div align="justify" style="font-size:16px;font-weight: bold" ng-bind-html="titulo"></div>
+	  </br>
+	  <p>{{fecha}}</p>
+	  </br>
+	  <div align="justify" style="padding: 5px" ng-bind-html="contenido"></div>
+	</div>
+  </ion-content>
+</ion-view>

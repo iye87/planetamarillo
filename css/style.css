@@ -1,0 +1,103 @@
+/* Empty. Add your own CSS if you like */
+#bljaIMGte{float:left;position:relative;height: 127px;}
+#bljaIMGte.bljaIMGtex{position:absolute;bottom:0px;}
+
+p{margin-bottom:3px;font-size:14px;color:#000000;margin-right: 5px;margin-left: 5px;font-weight: bold;}
+
+#contenedor {
+    display: table;
+    width: 100%;
+}
+#contenidos {
+    display: table-row;
+    float:left;
+    position:relative;
+    height: 127px;
+}
+#texto{
+	position:absolute;
+	bottom:0px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.frame_look_feel {
+    background-color: #FD3583;
+}
+.my-menu {
+  background-color: #fed931;
+}
+
+.my-menu .list {
+  background-color: transparent;
+}
+
+.my-menu .item, .my-menu .item-content, .my-menu .item-complex{
+  background-color: transparent;
+  color: #231f20;
+}
+
+.redondo{
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px;
+  padding: 0 4px 0 4px;
+}
+
+.fondo-input{background: #E6E7E8;}
+
+.p1 {color:#BCBEC0; 
+   font-size:12px;
+   font-style:calibri;
+  }
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*************Loading********************/
+#loading{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: white;
+    opacity: 0.50;
+    background-color: white;
+  top: 0px;
+  z-index: 9999;
+  display:none;
+}
+#loading img{
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+/*************EndLoading********************/
+
+#cont {
+    display: table;
+    border: 2px solid #000;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+#conteni {
+    display: table-row;
+}
+#columna {
+    display: table-cell;
+    border: 1px solid #000;
+    vertical-align: middle;
+    padding: 10px;
+}
