@@ -392,6 +392,127 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
 })
 .controller('PlanetascoreCtrl', function($scope, $stateParams) {
 })
+.controller('ResultadosCtrl', function($scope, $stateParams, $http) {
+  $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/partidos_resultados.json').success(function(data) {
+        
+        var partidos = [];
+        var img_vicitante;
+        var img_local;
+        for (var i = 0; i < data.length; i++) {
+
+            if (data[i][0]=="barcelona") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Bsc.png"}
+            else if (data[i][0]=="nacional") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/nacional.png"}
+            else if (data[i][0]=="liga") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/liga.png"}
+            else if (data[i][0]=="emelec") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/emelec.png"}
+            else if (data[i][0]=="fuerzaamarilla") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/FuerzaAmarilla.png"}
+            else if (data[i][0]=="cuenca") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Cuenca.png"}
+            else if (data[i][0]=="river") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/river.png"}
+            else if (data[i][0]=="catolica") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/catolica.png"}
+            else if (data[i][0]=="independiente") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Independ.png"}
+            else if (data[i][0]=="mushuc") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/mushuc.png"}
+            else if (data[i][0]=="delfin") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Delfin SC.png"}
+            else if (data[i][0]=="aucas") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/sdaucas.png"}
+
+
+            if (data[i][3]=="barcelona") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Bsc.png"}
+            else if (data[i][3]=="nacional") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/nacional.png"}
+            else if (data[i][3]=="liga") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/liga.png"}
+            else if (data[i][3]=="emelec") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/emelec.png"}
+            else if (data[i][3]=="fuerzaamarilla") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/FuerzaAmarilla.png"}
+            else if (data[i][3]=="cuenca") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Cuenca.png"}
+            else if (data[i][3]=="river") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/river.png"}
+            else if (data[i][3]=="catolica") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/catolica.png"}
+            else if (data[i][3]=="independiente") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Independ.png"}
+            else if (data[i][3]=="mushuc") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/mushuc.png"}
+            else if (data[i][3]=="delfin") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Delfin SC.png"}
+            else if (data[i][3]=="aucas") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/sdaucas.png"}
+          
+          var partido = {
+            'id': i + 1,
+            'equipo_local': data[i][0],
+            'fecha_partido': data[i][4],
+            'goles_local': data[i][1],
+            'goles_vicitante': data[i][2],
+            'equipo_vicitante': data[i][3],
+            'dia_partido': data[i][6],
+            'img_local':img_local,
+            'img_vicitante':img_vicitante
+          };
+          partidos.push(partido);
+        };
+        $scope.data_partidos = partidos;
+        //loading(false);
+    });
+})
+.controller('GoleadoresCtrl', function($scope, $stateParams, $http) {
+  $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/goleadores.json').success(function(data) {
+      var goleadores = [];
+
+      for (var i = 0; i < data.length; i++) {
+        
+        var goleador = {
+            'id': i + 1,
+            'nombre': data[i][0],
+            'equipo': data[i][1],
+            'goles': data[i][2]
+          };
+          goleadores.push(goleador);
+      };
+      $scope.data_goleadores = goleadores;
+  });
+})
+.controller('PartidosCtrl', function($scope, $stateParams, $http) {
+  $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/partidos_resultados.json').success(function(data) {
+        
+        var partidos = [];
+        var img_vicitante;
+        var img_local;
+        for (var i = 0; i < data.length; i++) {
+
+            if (data[i][0]=="barcelona") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Bsc.png"}
+            else if (data[i][0]=="nacional") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/nacional.png"}
+            else if (data[i][0]=="liga") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/liga.png"}
+            else if (data[i][0]=="emelec") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/emelec.png"}
+            else if (data[i][0]=="fuerzaamarilla") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/FuerzaAmarilla.png"}
+            else if (data[i][0]=="cuenca") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Cuenca.png"}
+            else if (data[i][0]=="river") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/river.png"}
+            else if (data[i][0]=="catolica") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/catolica.png"}
+            else if (data[i][0]=="independiente") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Independ.png"}
+            else if (data[i][0]=="mushuc") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/mushuc.png"}
+            else if (data[i][0]=="delfin") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Delfin SC.png"}
+            else if (data[i][0]=="aucas") {img_local="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/sdaucas.png"}
+
+
+            if (data[i][3]=="barcelona") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Bsc.png"}
+            else if (data[i][3]=="nacional") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/nacional.png"}
+            else if (data[i][3]=="liga") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/liga.png"}
+            else if (data[i][3]=="emelec") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/emelec.png"}
+            else if (data[i][3]=="fuerzaamarilla") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/FuerzaAmarilla.png"}
+            else if (data[i][3]=="cuenca") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Cuenca.png"}
+            else if (data[i][3]=="river") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/river.png"}
+            else if (data[i][3]=="catolica") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/catolica.png"}
+            else if (data[i][3]=="independiente") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Independ.png"}
+            else if (data[i][3]=="mushuc") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/mushuc.png"}
+            else if (data[i][3]=="delfin") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/Delfin SC.png"}
+            else if (data[i][3]=="aucas") {img_vicitante="http://planetamarillo.com/wp-content/themes/planet_pc_movil/images/sdaucas.png"}
+          
+          var partido = {
+            'id': i + 1,
+            'equipo_local': data[i][0],
+            'fecha_partido': data[i][4],
+            'goles_local': data[i][1],
+            'goles_vicitante': data[i][2],
+            'equipo_vicitante': data[i][3],
+            'dia_partido': data[i][6],
+            'img_local':img_local,
+            'img_vicitante':img_vicitante
+          };
+          partidos.push(partido);
+        };
+        $scope.data_partidos = partidos;
+        //loading(false);
+    });
+})
 .controller('PosicionesCtrl', function($scope, $stateParams, $http) {
   loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/tablaPosiciones.json').success(function(data) {
@@ -589,7 +710,7 @@ for (var i = 0; i < noticias.length; i++) {
 };
 
 })
-.controller('NoticiaCtrl', function($scope, $stateParams) {
+.controller('NoticiaCtrl', function($scope, $stateParams, $cordovaSocialSharing) {
 
 var noticias = JSON.parse(localStorage.getItem('noticias-planetamarillo'));
 var id = localStorage.getItem('idnoticia-planetamarillo');
@@ -601,8 +722,17 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
 
+
+$scope.shareViaFacebook = function(message, image, link){
+  $cordovaSocialSharing.canShareVia("facebook", message, image, link).then(function(result) {
+      $cordovaSocialSharing.shareViaFacebook(message, image, link);
+    }, function(error) {
+      alert("Cannot share on Facebook");
+    });
+}
 });

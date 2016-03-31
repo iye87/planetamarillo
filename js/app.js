@@ -158,12 +158,39 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.resultados', {
+      url: '/resultados',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/resultados.html',
+          controller: 'ResultadosCtrl'
+        }
+      }
+    })
     .state('app.calendario', {
       url: '/calendario',
       views: {
         'menuContent': {
           templateUrl: 'templates/calendario.html',
           controller: 'CalendarioCtrl'
+        }
+      }
+    })
+    .state('app.partidos', {
+      url: '/partidos',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/partidos.html',
+          controller: 'PartidosCtrl'
+        }
+      }
+    })
+    .state('app.goleadores', {
+      url: '/goleadores',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/goleadores.html',
+          controller: 'GoleadoresCtrl'
         }
       }
     })

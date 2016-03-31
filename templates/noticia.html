@@ -13,5 +13,11 @@
 	  </br>
 	  <div align="justify" style="padding: 5px" ng-bind-html="contenido"></div>
 	</div>
+
+	<div class="row row-center">
+	  <div class="col col-33" align="right">Vistas <label>10</label></div>
+	  <div class="col col-33" align="right">Comentarios <label>1</label></div>
+	  <div class="col col-33" align="right"><img align="center" ng-src="img/flecha_compartir.png" style="width: 20px; height: 20px"><label ng-click="shareViaFacebook('some message', null, '{{url}}')">Compartir</label></div>
+	</div>
   </ion-content>
 </ion-view>

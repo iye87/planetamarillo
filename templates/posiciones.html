@@ -6,12 +6,13 @@
     </ion-nav-buttons>
   </ion-nav-bar>  
   <ion-content>
-  
-	<div class="button-bar">
-	  <a class="button"><label style="font-size: 10px">RESULTADO</label></a>
-	  <a class="button"><label style="font-size: 10px">PARTIDOS</label></a>
-	  <a class="button"><label style="font-size: 10px">GOLEADORES</label></a>
-	  <a class="button"><label style="font-size: 10px">MARCADOR</label></a>
+
+  	<div class="row" style="background-color: #E8E9E9; border: think solid black">
+	  <div class="col"><a menu-close href="#/app/posiciones" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">TABLA</div></a></div>
+	  <div class="col"><a menu-close href="#/app/partidos" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">PARTIDOS</div></a></div>
+	  <div class="col"><a menu-close href="#/app/resultados" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">RESULTADO</div></a></div>
+	  <div class="col"><a menu-close href="#/app/calendario" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">CALENDARIO</div></a></div>
+	  <div class="col"><a menu-close href="#/app/goleadores" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">GOLEADORES</div></a></div>
 	</div>
 	
 	<div class="row" style="background-color: #D1D3D4">
@@ -37,7 +38,7 @@
 	  <div class="col">{{posicion.Pj}}</div>
 	  <div class="col">{{posicion.Pts}}</div>
 	  <div class="col">{{posicion.Gd}}</div>
-	  <div class="col"><img ng-src="{{posicion.img}}" style="width: 20px; height: 20px"></div>
+	  <div class="col">1<img ng-src="{{posicion.img}}" style="width: 20px; height: 20px"></div>
 	</div>
 	<div class="row" style="background-color: #D1D3D4"></div>
 	</div>
