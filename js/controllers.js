@@ -729,8 +729,8 @@ for (var i = 0; i < noticias.length; i++) {
 
 $scope.shareNative = function() {
         if (window.plugins && window.plugins.socialsharing) {
-            window.plugins.socialsharing.share("I'll be attending the session: " + $scope.session.title + ".",
-                'PhoneGap Day 2014', null, $scope.url,
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
                     console.log("Success")
                 },
