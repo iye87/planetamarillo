@@ -710,7 +710,7 @@ for (var i = 0; i < noticias.length; i++) {
 };
 
 })
-.controller('NoticiaCtrl', function($scope, $stateParams, $cordovaSocialSharing) {
+.controller('NoticiaCtrl', function($scope, $stateParams) {
 
 var noticias = JSON.parse(localStorage.getItem('noticias-planetamarillo'));
 var id = localStorage.getItem('idnoticia-planetamarillo');
@@ -727,12 +727,17 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-
-$scope.shareViaFacebook = function(message, image, link){
-  $cordovaSocialSharing.canShareVia("facebook", message, image, link).then(function(result) {
-      $cordovaSocialSharing.shareViaFacebook(message, image, link);
-    }, function(error) {
-      alert("Cannot share on Facebook");
-    });
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+            window.plugins.socialsharing.share("I'll be attending the session: " + $scope.session.title + ".",
+                'PhoneGap Day 2014', null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
 }
 });
