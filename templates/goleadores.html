@@ -1,0 +1,45 @@
+<ion-view view-title="" style="background-color: #D1D3D4">
+<ion-nav-bar class="bar-energized">
+    <ion-nav-buttons side="left">
+     <!-- Toggle left side menu -->
+     <button menu-toggle="left" class="button icon-left ion-navicon-round button-clear button-dark"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>  
+  <ion-content>
+
+  <div class="row" style="background-color: #E8E9E9; border: think solid black">
+	  <div class="col"><a menu-close href="#/app/posiciones" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">TABLA</div></a></div>
+	  <div class="col"><a menu-close href="#/app/partidos" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">PARTIDOS</div></a></div>
+	  <div class="col"><a menu-close href="#/app/resultados" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">RESULTADO</div></a></div>
+	  <div class="col"><a menu-close href="#/app/calendario" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">CALENDARIO</div></a></div>
+	  <div class="col"><a menu-close href="#/app/goleadores" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">GOLEADORES</div></a></div>
+	</div>
+
+	<div class="row" style="background-color: #414042; border: think solid black">
+	  <div class="col"><div align="left" style="color: #BCBEC0;">Goleadores</div></div>
+	  <div class="col"><div align="right" style="color: #BCBEC0;">Serie A</div></div>
+	</div>
+
+	<div class="row row-center" style="background-color: #D1D3D4; border: think solid black">
+	  <div style="font-size:12px;font-weight: bold" class="col col-10"></div>
+	  <div style="font-size:12px;font-weight: bold" class="col">NOMBRE</div>
+	  <div style="font-size:12px;font-weight: bold" class="col">EQUIPO</div>
+	  <div align="center" style="font-size:12px;font-weight: bold" class="col col-20">GOLES</div>
+	</div>
+	<div id="" ng-repeat="goleador in data_goleadores" ng-switch="goleador.equipo">
+	<div class="row row-center" style="background-color: #FDC441; border: think solid black" ng-switch-when="BARCELONA">
+	  <div class="col col-10">{{goleador.id}}</div>
+	  <div class="col">{{goleador.nombre}}</div>
+	  <div class="col">{{goleador.equipo}}</div>
+	  <div align="center" class="col col-20">{{goleador.goles}}</div>
+	</div>
+	<div class="row row-center" style="background-color: #E8E9E9; border: think solid black" ng-switch-default>
+	  <div class="col col-10">{{goleador.id}}</div>
+	  <div class="col">{{goleador.nombre}}</div>
+	  <div class="col">{{goleador.equipo}}</div>
+	  <div align="center" class="col col-20">{{goleador.goles}}</div>
+	</div>
+	<div class="row" style="background-color: #D1D3D4"></div>
+	</div>
+  </ion-content>
+</ion-view>
