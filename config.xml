@@ -13,6 +13,9 @@
 	
 	<!--PhoneGap Social Sharing plugin for Android, iOS and Windows Phone -->
 	<plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
+	
+	<!--ActionSheet Cordova / PhoneGap Plugin -->
+	<gap:plugin name="cordova-plugin-actionsheet" source="npm" />
 
     <!--Plugins de IOS para no mostrar la app por encima de la barra de notificacion-->
     <gap:plugin name="com.phonegap.plugin.statusbar" />

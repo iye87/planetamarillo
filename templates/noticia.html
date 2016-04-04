@@ -1,8 +1,12 @@
 <ion-view view-title="">
-<ion-nav-bar class="bar-energized">
-      <ion-nav-back-button class="button icon-left ion-chevron-left button-clear button-dark">
-	     Atras
-	  </ion-nav-back-button>
+<ion-nav-bar class="bar bar-header bar-energized">
+<ion-nav-buttons>
+      <button class="button icon-left ion-chevron-left button-clear button-dark" ng-click="volverAtras()">
+        Atras
+      </button>
+      <h1 class="title"></h1>
+      <button class="button ion-android-share-alt button-clear button-dark" ng-click="testShareSheet()"></button>
+    </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content>
 	<img class="media-content" src="{{img}}" style="width: 100%">
@@ -15,10 +19,9 @@
 	</div>
 
 	<div class="row row-center">
-	  <div class="col col-33" align="right">Vistas <label>10</label></div>
-	  <div class="col col-33" align="right">Comentarios <label>1</label></div>
-	  <div class="col col-33" align="right"><a class="tab-item" ng-click="shareNative()"><i class="icon ion-share"></i>
-</a></div>
+	  <div class="col" align="right">Vistas <label>10</label></div>
+	  <div class="col" align="right">Comentarios <label>1</label></div>
+	  <div class="col col-10" align="right"></div>
 	</div>
 
 	<div class="list list-inset">
@@ -29,12 +32,12 @@
 	</div>
 
 	<div class="row">
-		<div class="col col-20"><img src="img/facebook.png" style="width: 40px; height: 40px"></div>
-		<div class="col"><div><p>Leo Mora</p></div><p>
-	      This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-	      the content is from a card-body consisting of an image and paragraph text. The footer
-	      consists of tabs, icons aligned left, within the card-footer.
-	    </p></div>
+		<div class="col col-20"><img src="img/facebook.png" style="width: 40px; height: 40px; margin-left: 15px"></div>
+		<div class="col">Leo Mora>
+	      Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,
+	      Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,
+	      Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,Aqui va el comentario,Aqui va el comentario
+	</div>
 	</div>
   </ion-content>
 </ion-view>

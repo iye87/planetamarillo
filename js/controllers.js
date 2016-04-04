@@ -590,8 +590,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -601,8 +608,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('FEcuadorNoticiaCtrl', function($scope, $stateParams) {
@@ -621,8 +690,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -632,8 +708,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('LaTriNoticiaCtrl', function($scope, $stateParams) {
@@ -652,8 +790,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -663,8 +808,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('SerieANoticiaCtrl', function($scope, $stateParams) {
@@ -683,8 +890,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -694,8 +908,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('InternacionalesNoticiaCtrl', function($scope, $stateParams) {
@@ -714,8 +990,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -725,8 +1008,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('FormativaCtrl', function($scope, $stateParams) {
@@ -745,8 +1090,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -756,8 +1108,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('EmbajadoresNoticiasCtrl', function($scope, $stateParams) {
@@ -776,8 +1190,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -787,8 +1208,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('ChicasNoticiaCtrl', function($scope, $stateParams) {
@@ -807,8 +1290,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -818,8 +1308,70 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 
 })
 .controller('NoticiaCtrl', function($scope, $stateParams) {
@@ -839,8 +1391,15 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
-$scope.shareNative = function() {
-        if (window.plugins && window.plugins.socialsharing) {
+$scope.volverAtras = function(){
+  window.history.back();
+}
+
+var callback = function(buttonIndex) {
+    setTimeout(function() {
+      switch(buttonIndex)  {
+          //facebook
+          case 0: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -850,6 +1409,69 @@ $scope.shareNative = function() {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");
-}
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+    });
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Compartir',
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete it',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
 });
