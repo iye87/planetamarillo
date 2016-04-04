@@ -12,7 +12,7 @@
     <plugin name="com.stevenpartridge.inappbrowser" spec="1.4" source="pgb" />
 	
 	<!--PhoneGap Social Sharing plugin for Android, iOS and Windows Phone -->
-	<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.16" />
+	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 
     <!--Plugins de IOS para no mostrar la app por encima de la barra de notificacion-->
     <gap:plugin name="com.phonegap.plugin.statusbar" />
