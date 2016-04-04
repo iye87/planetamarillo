@@ -590,6 +590,20 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
+
 })
 .controller('FEcuadorNoticiaCtrl', function($scope, $stateParams) {
 
@@ -606,6 +620,20 @@ for (var i = 0; i < noticias.length; i++) {
     break;
   } 
 };
+
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
 
 })
 .controller('LaTriNoticiaCtrl', function($scope, $stateParams) {
@@ -624,6 +652,20 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
+
 })
 .controller('SerieANoticiaCtrl', function($scope, $stateParams) {
 
@@ -640,6 +682,20 @@ for (var i = 0; i < noticias.length; i++) {
     break;
   } 
 };
+
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
 
 })
 .controller('InternacionalesNoticiaCtrl', function($scope, $stateParams) {
@@ -658,6 +714,20 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
+
 })
 .controller('FormativaCtrl', function($scope, $stateParams) {
 
@@ -674,6 +744,20 @@ for (var i = 0; i < noticias.length; i++) {
     break;
   } 
 };
+
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
 
 })
 .controller('EmbajadoresNoticiasCtrl', function($scope, $stateParams) {
@@ -692,6 +776,20 @@ for (var i = 0; i < noticias.length; i++) {
   } 
 };
 
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
+
 })
 .controller('ChicasNoticiaCtrl', function($scope, $stateParams) {
 
@@ -708,6 +806,20 @@ for (var i = 0; i < noticias.length; i++) {
     break;
   } 
 };
+
+$scope.shareNative = function() {
+        if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");
+}
 
 })
 .controller('NoticiaCtrl', function($scope, $stateParams) {
