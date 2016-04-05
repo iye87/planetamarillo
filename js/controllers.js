@@ -388,6 +388,68 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
 })
 .controller('RegistroCtrl', function($scope, $stateParams) {
 })
+.controller('InvitarAmigosCtrl', function($scope, $stateParams) {
+})
+.controller('menuCtrl', function($scope, $stateParams) {
+
+  var callback = function(buttonIndex) {
+      switch(buttonIndex)  {
+          //facebook
+          case 1: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaFacebook('Te recomiendo la app PlanetAmarillo', 'img/logo_compartir.png', 'http://planetamarillo.com/',
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;
+
+        //whats app
+          case 2: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaWhatsApp('Te recomiendo la app PlanetAmarillo', 'img/logo_compartir.png', 'http://planetamarillo.com/',
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available"); break;  
+
+        //tiwtter
+          case 3: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.shareViaTwitter('Te recomiendo la app PlanetAmarillo', 'img/logo_compartir.png', 'http://planetamarillo.com/',
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;  
+        } 
+  };
+
+  $scope.testShareSheet = function() {
+    var options = {
+        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
+        'title': 'Invita a tus amigos',
+        'buttonLabels': ['Facebook', 'WhatsApp', 'Twitter'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancelar',
+        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
+    };
+    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
+    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+    window.plugins.actionsheet.show(options, callback);
+  };
+})
 .controller('CanaltvCtrl', function($scope, $stateParams) {
 })
 .controller('PlanetascoreCtrl', function($scope, $stateParams) {

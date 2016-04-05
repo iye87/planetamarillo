@@ -149,6 +149,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.invitaramigos', {
+      url: '/invitaramigos',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/invitaramigos.html',
+          controller: 'InvitarAmigosCtrl'
+        }
+      }
+    })
     .state('app.posiciones', {
       url: '/posiciones',
       views: {
