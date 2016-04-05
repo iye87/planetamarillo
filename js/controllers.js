@@ -595,7 +595,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -636,7 +635,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -647,7 +645,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -695,7 +692,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -736,7 +732,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -747,7 +742,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -795,7 +789,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -836,7 +829,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -847,7 +839,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -895,7 +886,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -936,7 +926,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -947,7 +936,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -995,7 +983,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -1036,7 +1023,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -1047,7 +1033,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1095,7 +1080,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -1136,7 +1120,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -1147,7 +1130,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1195,7 +1177,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -1236,7 +1217,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -1247,7 +1227,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1295,7 +1274,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -1336,7 +1314,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -1347,7 +1324,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1396,7 +1372,6 @@ $scope.volverAtras = function(){
 }
 
 var callback = function(buttonIndex) {
-    setTimeout(function() {
       switch(buttonIndex)  {
           //facebook
           case 0: if (window.plugins && window.plugins.socialsharing) {
@@ -1437,7 +1412,6 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
         } 
-    });
   };
 
   $scope.testShareSheet = function() {
@@ -1448,7 +1422,6 @@ var callback = function(buttonIndex) {
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
