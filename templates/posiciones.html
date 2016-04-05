@@ -7,7 +7,7 @@
   </ion-nav-bar>  
   <ion-content>
 
-  	<div class="row" style="background-color: #E8E9E9; border: think solid black">
+  	<div class="row" style="background-color: #E8E9E9; margin-left:1px">
 	  <div class="col"><a menu-close href="#/app/posiciones" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">TABLA</div></a></div>
 	  <div class="col"><a menu-close href="#/app/partidos" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">PARTIDOS</div></a></div>
 	  <div class="col"><a menu-close href="#/app/resultados" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">RESULTADO</div></a></div>
@@ -15,14 +15,14 @@
 	  <div class="col"><a menu-close href="#/app/goleadores" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">GOLEADORES</div></a></div>
 	</div>
 	
-	<div class="row" style="background-color: #D1D3D4">
+	<div class="row" style="background-color: #D1D3D4; margin-left:1px">
 		<div class="col col-50"><h4 class="title" style="color: #000">Tabla de Posiciones</h4></div>
 	</div>
-	<div class="row" style="background-color: #D1D3D4">		
+	<div class="row" style="background-color: #D1D3D4; margin-left:1px">		
 		<div class="col col-33 col-offset-67"><h5 class="title" style="color: #000">{{etapa}} | {{fecha}}</h5></div>
 	</div>
 
-	<div class="row" style="background-color: #D1D3D4">
+	<div class="row" style="background-color: #D1D3D4; margin-left:1px">
 	  <div class="col"></div>
 	  <div class="col col-33">EQUIPO</div>
 	  <div class="col">PJ</div>
@@ -32,7 +32,7 @@
 	</div>
 
 	<div id="" ng-repeat="posicion in data_posicion">
-	<div class="row" style="background-color: #E8E9E9; border: think solid black">
+	<div class="row" style="background-color: #E8E9E9; margin-left:1px">
 	  <div class="col">{{posicion.id}}</div>
 	  <div class="col col-33">{{posicion.equipo}}</div>
 	  <div class="col">{{posicion.Pj}}</div>
@@ -40,7 +40,7 @@
 	  <div class="col">{{posicion.Gd}}</div>
 	  <div class="col">1<img ng-src="{{posicion.img}}" style="width: 20px; height: 20px"></div>
 	</div>
-	<div class="row" style="background-color: #D1D3D4"></div>
+	<div class="row" style="background-color: #D1D3D4; margin-left:1px"></div>
 	</div>
   </ion-content>
 </ion-view>

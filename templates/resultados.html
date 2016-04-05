@@ -7,7 +7,7 @@
   </ion-nav-bar>  
   <ion-content>
 
-  	<div class="row" style="background-color: #E8E9E9; border: think solid black">
+  	<div class="row" style="background-color: #E8E9E9; margin-left:1px">
 	  <div class="col"><a menu-close href="#/app/posiciones" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">TABLA</div></a></div>
 	  <div class="col"><a menu-close href="#/app/partidos" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">PARTIDOS</div></a></div>
 	  <div class="col"><a menu-close href="#/app/resultados" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">RESULTADO</div></a></div>
@@ -15,13 +15,13 @@
 	  <div class="col"><a menu-close href="#/app/goleadores" style="text-decoration: none;"><div align="center" style="font-weight: bold; font-size: 10px">GOLEADORES</div></a></div>
 	</div>
 
-	<div class="row" style="background-color: #414042; border: think solid black">
+	<div class="row" style="background-color: #414042; margin-left:1px">
 	  <div class="col"><div align="left" style="color: #BCBEC0;">FECHA 2</div></div>
 	  <div class="col"><div align="right" style="color: #BCBEC0;">Serie A</div></div>
 	</div>
 
 	<div id="" ng-repeat="partido in data_partidos">
-	<div class="row row-center" style="background-color: #E8E9E9; border: think solid black">
+	<div class="row row-center" style="background-color: #E8E9E9; margin-left:1px">
 	  <div style="font-size:12px;font-weight: bold" class="col">{{partido.fecha_partido}}</div>
 	  <div style="font-size:12px" class="col">{{partido.equipo_local}}</div>
 	  <div class="col"><div align="center"><img ng-src="{{partido.img_local}}" style="width: 40px; height: 40px"></div></div>
@@ -30,7 +30,7 @@
 	  <div class="col"><div align="center"><img ng-src="{{partido.img_vicitante}}" style="width: 40px; height: 40px"></div></div>
 	  <div style="font-size:12px" class="col">{{partido.equipo_vicitante}}</div>
 	</div>
-	<div class="row" style="background-color: #D1D3D4"></div>
+	<div class="row" style="background-color: #D1D3D4; margin-left:1px"></div>
 	</div>
   </ion-content>
 </ion-view>

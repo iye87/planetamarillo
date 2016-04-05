@@ -597,7 +597,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -610,7 +610,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -623,7 +623,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -644,7 +644,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -694,7 +694,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -707,7 +707,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -720,7 +720,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -741,7 +741,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -791,7 +791,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -804,7 +804,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -817,7 +817,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -838,7 +838,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -888,7 +888,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -901,7 +901,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -914,7 +914,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -935,7 +935,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -985,7 +985,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -998,7 +998,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -1011,7 +1011,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -1032,7 +1032,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1082,7 +1082,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -1095,7 +1095,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -1108,7 +1108,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -1129,7 +1129,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1179,7 +1179,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -1192,7 +1192,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -1205,7 +1205,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -1226,7 +1226,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1276,7 +1276,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -1289,7 +1289,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -1302,7 +1302,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -1323,7 +1323,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
@@ -1374,7 +1374,7 @@ $scope.volverAtras = function(){
 var callback = function(buttonIndex) {
       switch(buttonIndex)  {
           //facebook
-          case 0: if (window.plugins && window.plugins.socialsharing) {
+          case 1: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
                 function() {
@@ -1387,7 +1387,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;
 
         //whats app
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+          case 2: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
                 function() {
@@ -1400,7 +1400,7 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available"); break;  
 
         //tiwtter
-          case 2: if (window.plugins && window.plugins.socialsharing) {
+          case 3: if (window.plugins && window.plugins.socialsharing) {
 
           window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
                 function() {
@@ -1421,7 +1421,7 @@ var callback = function(buttonIndex) {
         'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel',
+        'addCancelButtonWithLabel': 'Cancelar',
         'position': [20, 40] // for iPad pass in the [x, y] position of the popover
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
