@@ -65,6 +65,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/todo
         loading(false);
 
         localStorage.setItem('noticias-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -103,6 +106,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/barc
         loading(false);
 
         localStorage.setItem('barcelona-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -141,6 +147,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/futb
         loading(false);
 
         localStorage.setItem('fecuador-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -179,6 +188,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/inte
         loading(false);
 
         localStorage.setItem('internacionales-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -217,6 +229,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/laTr
         loading(false);
 
         localStorage.setItem('latri-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -255,6 +270,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/seri
         loading(false);
 
         localStorage.setItem('seriea-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -293,6 +311,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/form
         loading(false);
 
         localStorage.setItem('formativas-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -331,6 +352,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/emba
         loading(false);
 
         localStorage.setItem('embajadores-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -369,6 +393,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
         loading(false);
 
         localStorage.setItem('chicas-planetamarillo', JSON.stringify(noticias));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 
   $scope.noticiaClic = function(id){
@@ -523,6 +550,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
         };
         $scope.data_partidos = partidos;
         loading(false);
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 })
 .controller('GoleadoresCtrl', function($scope, $stateParams, $http) {
@@ -542,7 +572,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
       };
       $scope.data_goleadores = goleadores;
       loading(false);
-  });
+  }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
+    });
 })
 .controller('PartidosCtrl', function($scope, $stateParams, $http) {
   loading(true);
@@ -595,6 +628,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
         };
         $scope.data_partidos = partidos;
         loading(false);
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 })
 .controller('PosicionesCtrl', function($scope, $stateParams, $http) {
@@ -627,7 +663,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/tabl
         $scope.fecha = data[0][6];
         $scope.data_posicion = posiciones;
 loading(false);
-        localStorage.setItem('posiciones-planetamarillo', JSON.stringify(posiciones));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 })
 .controller('CalendarioCtrl', function($scope, $stateParams, $http) {
@@ -655,7 +693,9 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/cale
         };
         $scope.data_calendario = calendario;
 loading(false);
-        localStorage.setItem('calendario-planetamarillo', JSON.stringify(calendario));
+    }).error(function(){
+        alert("Error de Conexión");
+      loading(false);
     });
 })
 .controller('BarcelonaNoticiaCtrl', function($scope, $stateParams) {
