@@ -397,7 +397,7 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
           //facebook
           case 1: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.shareViaFacebook('Te recomiendo la app PlanetAmarillo', 'img/logo_compartir.png', 'http://planetamarillo.com/',
+          window.plugins.socialsharing.shareViaFacebook('Te recomiendo la app PlanetAmarillo', null, 'http://planetamarillo.com/',
                 function() {
                     console.log("Success")
                 },
@@ -410,7 +410,7 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
         //whats app
           case 2: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.shareViaWhatsApp('Te recomiendo la app PlanetAmarillo', 'img/logo_compartir.png', 'http://planetamarillo.com/',
+          window.plugins.socialsharing.shareViaWhatsApp('Te recomiendo la app PlanetAmarillo', null, 'http://planetamarillo.com/',
                 function() {
                     console.log("Success")
                 },
@@ -423,7 +423,7 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
         //tiwtter
           case 3: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.shareViaTwitter('Te recomiendo la app PlanetAmarillo', 'img/logo_compartir.png', 'http://planetamarillo.com/',
+          window.plugins.socialsharing.shareViaTwitter('Te recomiendo la app PlanetAmarillo', null, 'http://planetamarillo.com/',
                 function() {
                     console.log("Success")
                 },
@@ -438,7 +438,7 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
   $scope.testShareSheet = function() {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Invita a tus amigos',
+        'title': 'Compartir',
         'buttonLabels': ['Facebook', 'WhatsApp', 'Twitter'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
@@ -449,12 +449,31 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
     // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
     window.plugins.actionsheet.show(options, callback);
   };
+
+  function testDeleteSheet() {
+    var options = {
+        'addCancelButtonWithLabel': 'Cancel',
+        'addDestructiveButtonWithLabel' : 'Delete note'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
+
+  function testLogoutSheet() {
+    var options = {
+        'buttonLabels': ['Log out'],
+        'androidEnableCancelButton' : true, // default false
+        'winphoneEnableCancelButton' : true, // default false
+        'addCancelButtonWithLabel': 'Cancel'
+    };
+    window.plugins.actionsheet.show(options, callback);
+  };
 })
 .controller('CanaltvCtrl', function($scope, $stateParams) {
 })
 .controller('PlanetascoreCtrl', function($scope, $stateParams) {
 })
 .controller('ResultadosCtrl', function($scope, $stateParams, $http) {
+  loading(true);
   $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/partidos_resultados.json').success(function(data) {
         
         var partidos = [];
@@ -503,10 +522,11 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
           partidos.push(partido);
         };
         $scope.data_partidos = partidos;
-        //loading(false);
+        loading(false);
     });
 })
 .controller('GoleadoresCtrl', function($scope, $stateParams, $http) {
+  loading(true);
   $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/goleadores.json').success(function(data) {
       var goleadores = [];
 
@@ -521,9 +541,11 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
           goleadores.push(goleador);
       };
       $scope.data_goleadores = goleadores;
+      loading(false);
   });
 })
 .controller('PartidosCtrl', function($scope, $stateParams, $http) {
+  loading(true);
   $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/partidos_resultados.json').success(function(data) {
         
         var partidos = [];
@@ -572,7 +594,7 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
           partidos.push(partido);
         };
         $scope.data_partidos = partidos;
-        //loading(false);
+        loading(false);
     });
 })
 .controller('PosicionesCtrl', function($scope, $stateParams, $http) {
@@ -648,6 +670,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
@@ -745,6 +768,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
@@ -842,6 +866,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
@@ -939,6 +964,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
@@ -1036,6 +1062,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
@@ -1133,6 +1160,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
@@ -1230,6 +1258,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
@@ -1327,6 +1356,7 @@ for (var i = 0; i < noticias.length; i++) {
     $scope.img = noticias[i].img;
     $scope.contenido = noticias[i].contenido;
     $scope.autor = noticias[i].autor;
+    $scope.url = noticias[i].url;
     break;
   } 
 };
