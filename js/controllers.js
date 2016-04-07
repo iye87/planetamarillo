@@ -459,6 +459,19 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share('Te recomiendo la app PlanetAmarillo',null, 'http://planetamarillo.com/',
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -466,7 +479,7 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Facebook', 'WhatsApp', 'Twitter'],
+        'buttonLabels': ['Facebook', 'WhatsApp', 'Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -759,6 +772,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -766,7 +792,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -856,7 +882,20 @@ var callback = function(buttonIndex) {
                     console.log("Share fail " + error)
                 });
         }
-        else console.log("Share plugin not available");  break;  
+        else console.log("Share plugin not available");  break; 
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -864,7 +903,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -955,6 +994,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -962,7 +1014,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -1053,6 +1105,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -1060,7 +1125,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -1151,6 +1216,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -1158,7 +1236,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -1249,6 +1327,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -1256,7 +1347,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -1347,6 +1438,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -1354,7 +1458,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -1445,6 +1549,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -1452,7 +1569,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
@@ -1543,6 +1660,19 @@ var callback = function(buttonIndex) {
                 });
         }
         else console.log("Share plugin not available");  break;  
+
+        //Original
+          case 4: if (window.plugins && window.plugins.socialsharing) {
+
+          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
+                function() {
+                    console.log("Success")
+                },
+                function (error) {
+                    console.log("Share fail " + error)
+                });
+        }
+        else console.log("Share plugin not available");  break;
         } 
   };
 
@@ -1550,7 +1680,7 @@ var callback = function(buttonIndex) {
     var options = {
         'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
         'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter'],
+        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
         'androidEnableCancelButton' : true, // default false
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancelar',
