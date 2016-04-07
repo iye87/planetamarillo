@@ -16,6 +16,9 @@
 	
 	<!--ActionSheet Cordova / PhoneGap Plugin -->
 	<gap:plugin name="cordova-plugin-actionsheet" source="npm" />
+	
+	<!--Cordova Push Notifications Plugin for Android, iOS, WP8, Windows8, BlackBerry 10 and Amazon Fire OS-->
+	<plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
 
     <!--Plugins de IOS para no mostrar la app por encima de la barra de notificacion-->
     <gap:plugin name="com.phonegap.plugin.statusbar" />
