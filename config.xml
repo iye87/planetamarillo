@@ -14,9 +14,6 @@
 	<!--PhoneGap Social Sharing plugin for Android, iOS and Windows Phone -->
 	<plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
 	
-	<!--ActionSheet Cordova / PhoneGap Plugin -->
-	<gap:plugin name="cordova-plugin-actionsheet" source="npm" />
-	
 	<!--Cordova Push Notifications Plugin for Android, iOS, WP8, Windows8, BlackBerry 10 and Amazon Fire OS-->
 	<gap:plugin name="pushbots-cordova-plugin" source="npm" />
 
