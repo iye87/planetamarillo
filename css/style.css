@@ -85,6 +85,17 @@ p{margin-bottom:3px;font-size:14px;color:#000000;margin-right: 5px;margin-left: 
 }
 /*************EndLoading********************/
 
-.hola{
-  text-align:center;
+#contenedornoticias {
+  padding: 5px;
+  overflow: hidden;
+}
+#contenedorderecha{
+  float: left;
+  width: 300px;
+  margin: 40px;
+}
+#contenedorizquierda{
+  float: left;
+  width: 300px;
+  margin: 40px;
 }

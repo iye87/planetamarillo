@@ -47,7 +47,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/todosPostMovil.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -55,12 +59,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/todo
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
