@@ -76,6 +76,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/todo
       loading(false);
     });
 
+  $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
+
   $scope.noticiaClic = function(id){
 
     var noticias = JSON.parse(localStorage.getItem('noticias-planetamarillo'));
@@ -94,7 +98,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/barcelonaPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -102,12 +110,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/barc
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par': par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
@@ -116,6 +126,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/barc
         alert("Error de Conexión");
       loading(false);
     });
+
+      $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
 
   $scope.noticiaClic = function(id){
 
@@ -135,7 +149,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/futbolEcuatorianoPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -143,12 +161,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/futb
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
@@ -157,6 +177,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/futb
         alert("Error de Conexión");
       loading(false);
     });
+
+  $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
 
   $scope.noticiaClic = function(id){
 
@@ -176,7 +200,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/internacionalesPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -184,12 +212,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/inte
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'        
 
         loading(false);
 
@@ -198,6 +228,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/inte
         alert("Error de Conexión");
       loading(false);
     });
+
+      $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
 
   $scope.noticiaClic = function(id){
 
@@ -217,7 +251,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/laTriPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -225,12 +263,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/laTr
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
@@ -239,6 +279,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/laTr
         alert("Error de Conexión");
       loading(false);
     });
+
+      $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
 
   $scope.noticiaClic = function(id){
 
@@ -258,7 +302,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/serieAPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -266,12 +314,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/seri
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
@@ -280,6 +330,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/seri
         alert("Error de Conexión");
       loading(false);
     });
+
+      $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
 
   $scope.noticiaClic = function(id){
 
@@ -299,7 +353,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/formativasPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -307,12 +365,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/form
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
@@ -321,6 +381,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/form
         alert("Error de Conexión");
       loading(false);
     });
+
+      $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
 
   $scope.noticiaClic = function(id){
 
@@ -340,7 +404,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/embajadoresEcuatorianosPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -348,12 +416,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/emba
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
@@ -362,6 +432,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/emba
         alert("Error de Conexión");
       loading(false);
     });
+
+      $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+}
 
   $scope.noticiaClic = function(id){
 
@@ -381,7 +455,11 @@ loading(true);
 $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chicas_calientesPost.json').success(function(data) {
         
         var noticias = [];
+        var par;
         for (var i = 0; i < data.length; i++) {
+
+          if (i%2==0) {par=1}else{par=0};
+
           var noticia = {
             'id': i + 1,
             'titulo': data[i][0],
@@ -389,12 +467,14 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
             'autor': data[i][2],
             'fecha': data[i][3],
             'url': data[i][4],
-            'contenido': data[i][5]
+            'contenido': data[i][5],
+            'par':par
           };
           
           noticias.push(noticia);
         };
         $scope.data_noticias = noticias;
+        $scope.hr='<hr/>'
 
         loading(false);
 
@@ -403,6 +483,11 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
         alert("Error de Conexión");
       loading(false);
     });
+
+      $scope.compartir = function(){
+  window.plugins.socialsharing.share(noticias.titulo , null, null, noticias.url);
+  alert('funciona');
+}
 
   $scope.noticiaClic = function(id){
 

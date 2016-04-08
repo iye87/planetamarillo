@@ -6,18 +6,18 @@
 	  </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content>
-	<div class="item item-body" ng-repeat="prueba in data_noticias" ng-click="noticiaClic(prueba.id)" ng-switch="prueba.par">
+	<div class="item item-body" ng-repeat="prueba in data_noticias" ng-switch="prueba.par">
 	<div ng-switch-when="1">
-		<div><img src="{{prueba.img}}" style=" width: 50%;float: left"></div>
-		<div align="justify" ng-bind-html="prueba.titulo" style="clear: right; margin-left: 52%;"></div>
+		<div ng-click="noticiaClic(prueba.id)"><img src="{{prueba.img}}" style=" width: 50%;float: left"></div>
+		<div ng-click="noticiaClic(prueba.id)" align="justify" ng-bind-html="prueba.titulo" style="clear: right; margin-left: 52%;"></div>
 		<div align="justify" ng-bind-html="hr" style="clear: right; margin-left: 52%;"></div>
-		<div class="ion-android-share" style="clear: right; margin-left: 52%;">  Compartir</div>
+		<div class="ion-android-share" style="clear: right; margin-left: 52%;" ng-click="compartir()">  Compartir</div>
 	</div>
 	<div ng-switch-when="0">
-		<div><img src="{{prueba.img}}" style=" width: 50%;float: right"></div>
-		<div align="justify" ng-bind-html="prueba.titulo" style="clear: left; margin-right: 52%;"></div>
+		<div ng-click="noticiaClic(prueba.id)"><img src="{{prueba.img}}" style=" width: 50%;float: right"></div>
+		<div ng-click="noticiaClic(prueba.id)" align="justify" ng-bind-html="prueba.titulo" style="clear: left; margin-right: 52%;"></div>
 		<div align="justify" ng-bind-html="hr" style="clear: left; margin-right: 52%;"></div>
-		<div class="ion-android-share" style="clear: left; margin-right: 45%;">  Compartir</div>
+		<div class="ion-android-share" style="clear: left; margin-right: 45%;" ng-click="compartir()">  Compartir</div>
 	</div>
 
 	</div>
