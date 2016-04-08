@@ -463,16 +463,11 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share('Te recomiendo la app PlanetAmarillo',null, 'http://planetamarillo.com/',
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
-        } 
+        }  
   };
 
   $scope.testShareSheet = function() {
@@ -774,15 +769,11 @@ var callback = function(buttonIndex) {
         else console.log("Share plugin not available");  break;  
 
         //Original
+        //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
         } 
@@ -887,16 +878,11 @@ var callback = function(buttonIndex) {
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
-        } 
+        }  
   };
 
   $scope.testShareSheet = function() {
@@ -998,16 +984,11 @@ var callback = function(buttonIndex) {
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
-        } 
+        }  
   };
 
   $scope.testShareSheet = function() {
@@ -1106,16 +1087,11 @@ var callback = function(buttonIndex) {
         }
         else console.log("Share plugin not available");  break;  
 
-        //Original
+       //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
         } 
@@ -1220,13 +1196,8 @@ var callback = function(buttonIndex) {
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
         } 
@@ -1331,13 +1302,8 @@ var callback = function(buttonIndex) {
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
         } 
@@ -1442,13 +1408,8 @@ var callback = function(buttonIndex) {
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
         } 
@@ -1553,13 +1514,8 @@ var callback = function(buttonIndex) {
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
         } 
@@ -1664,13 +1620,8 @@ var callback = function(buttonIndex) {
         //Original
           case 4: if (window.plugins && window.plugins.socialsharing) {
 
-          window.plugins.socialsharing.share($scope.titulo ,null, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
+          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+               
         }
         else console.log("Share plugin not available");  break;
         } 
