@@ -419,89 +419,10 @@ $http.get('http://planetamarillo.com/wp-content/themes/planet_pc_movil/json/chic
 })
 .controller('menuCtrl', function($scope, $stateParams) {
 
-  var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
+  $scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
-          window.plugins.socialsharing.shareViaFacebook('Te recomiendo la app PlanetAmarillo', null, 'http://planetamarillo.com/',
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Te recomiendo la app PlanetAmarillo', null, 'http://planetamarillo.com/',
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Te recomiendo la app PlanetAmarillo', null, 'http://planetamarillo.com/',
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        }  
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Facebook', 'WhatsApp', 'Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
 })
 .controller('CanaltvCtrl', function($scope, $stateParams) {
 })
@@ -727,90 +648,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        } 
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('FEcuadorNoticiaCtrl', function($scope, $stateParams) {
@@ -834,89 +674,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break; 
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        }  
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('LaTriNoticiaCtrl', function($scope, $stateParams) {
@@ -940,89 +700,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        }  
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('SerieANoticiaCtrl', function($scope, $stateParams) {
@@ -1046,89 +726,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-       //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        } 
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('InternacionalesNoticiaCtrl', function($scope, $stateParams) {
@@ -1152,89 +752,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        } 
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('FormativaCtrl', function($scope, $stateParams) {
@@ -1258,89 +778,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        } 
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('EmbajadoresNoticiasCtrl', function($scope, $stateParams) {
@@ -1364,89 +804,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        } 
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('ChicasNoticiaCtrl', function($scope, $stateParams) {
@@ -1470,89 +830,9 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        } 
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 })
 .controller('NoticiaCtrl', function($scope, $stateParams) {
@@ -1576,88 +856,8 @@ $scope.volverAtras = function(){
   window.history.back();
 }
 
-var callback = function(buttonIndex) {
-      switch(buttonIndex)  {
-          //facebook
-          case 1: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;
-
-        //whats app
-          case 2: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available"); break;  
-
-        //tiwtter
-          case 3: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.shareViaTwitter('Message via Tiwtter', null /* img */, $scope.url,
-                function() {
-                    console.log("Success")
-                },
-                function (error) {
-                    console.log("Share fail " + error)
-                });
-        }
-        else console.log("Share plugin not available");  break;  
-
-        //Original
-          case 4: if (window.plugins && window.plugins.socialsharing) {
-
-          window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
-               
-        }
-        else console.log("Share plugin not available");  break;
-        } 
-  };
-
-  $scope.testShareSheet = function() {
-    var options = {
-        'androidTheme': window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT, // default is THEME_TRADITIONAL
-        'title': 'Compartir',
-        'buttonLabels': ['Via Facebook', 'Via WhatsApp', 'Via Twitter', 'Lawton'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancelar',
-        'position': [20, 40] // for iPad pass in the [x, y] position of the popover
-    };
-    // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
-    // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'androidEnableCancelButton' : true, // default false
-        'winphoneEnableCancelButton' : true, // default false
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
+$scope.compartir = function(){
+  window.plugins.socialsharing.share($scope.titulo , null, null, $scope.url);
+}
 
 });
