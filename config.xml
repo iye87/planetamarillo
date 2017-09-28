@@ -15,11 +15,12 @@
 	<plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
 	
 	<!--Cordova Push Notifications Plugin for Android, iOS, WP8, Windows8, BlackBerry 10 and Amazon Fire OS-->
-	<gap:plugin name="pushbots-cordova-plugin" source="npm" />
+	<plugin name="pushbots-cordova-plugin" source="npm" />
 
     <!--Plugins de IOS para no mostrar la app por encima de la barra de notificacion-->
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <plugin name="com.phonegap.plugin.statusbar" />
     <preference name="StatusBarOverlaysWebView" value="false" />
+    
 
     <icon src="icon.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="screen.png" />
